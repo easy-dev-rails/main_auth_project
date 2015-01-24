@@ -1,0 +1,22 @@
+<h1>Список пользователей</h1>
+
+<div>
+  <table border="2px solid black">
+    <tr>
+      <th>ID</th>
+      <th>Имя</th>
+      <th>E-mail</th>
+      <th>Дата создания</th>
+      <th>&nbsp;</th>
+    </tr>
+    <% @users.each do |user| %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.created_at %></td>
+      <td><%= link_to 'Изменить', edit_user_path(user.id) %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>

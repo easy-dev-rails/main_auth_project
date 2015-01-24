@@ -1,0 +1,10 @@
+<% if @user.errors.any? %>
+    <div>
+      Форма содержит ошибки.
+    </div>
+    <ul>
+      <% @user.errors.full_messages.each do |error| %>
+      <li>* <%= error %></li>
+      <% end %>
+    </ul>
+<% end %>
